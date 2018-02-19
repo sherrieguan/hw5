@@ -1,0 +1,35 @@
+var x = 45;
+var y = 50;
+velocityX = 3;
+velocityY = 1;
+
+function setup() {
+  createCanvas(400, 400);
+  // createCanvas(200 + random(400), 200 + random(400));
+  //print('width =', width)
+  //print('height =', height)
+}
+  
+function draw() {
+  background(0);
+  noStroke();
+
+  // draw ellipse
+  ellipse(x, y, 10);
+  
+  // move right 3 pixels
+  x = x + velocityX;
+  
+  // move down 1 pixel
+  y = y + velocityY;
+  
+//  print("(x,y) = ", x, ' ', y);
+  if (x > width || x < 0) {
+    velocityX = -velocityX;
+  }
+  if (y > height || y < 0) {
+    velocityY = -velocityY;
+}
+}
+  
+//    print('disappeared')
