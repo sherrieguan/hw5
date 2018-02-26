@@ -11,11 +11,7 @@
 // and repeat once
 // Songsheet I used for reference: https://musescore.com/bomb_and_kou/shelter
 
-var freqA = 261;
-var freqS = 440;
-var freqD = 392;
-var freqF = 294;
-var freqG = 329;
+var freq = [261, 440, 392, 294, 329];
 
 var oscA, oscS, oscD, oscF, oscG;
 
@@ -32,31 +28,31 @@ function setup() {
   
   oscA = new p5.Oscillator();
   oscA.setType('triangle');
-  oscA.freq(freqA);
+  oscA.freq(freq[0]);
   oscA.amp(0);
   oscA.start();
   
   oscS = new p5.Oscillator();
   oscS.setType('triangle');
-  oscS.freq(freqS);
+  oscS.freq(freq[1]);
   oscS.amp(0);
   oscS.start();
   
   oscD = new p5.Oscillator();
   oscD.setType('triangle');
-  oscD.freq(freqD);
+  oscD.freq(freq[2]);
   oscD.amp(0);
   oscD.start();
   
   oscF = new p5.Oscillator();
   oscF.setType('triangle');
-  oscF.freq(freqF);
+  oscF.freq(freq[3]);
   oscF.amp(0);
   oscF.start();
   
   oscG = new p5.Oscillator();
   oscG.setType('triangle');
-  oscG.freq(freqG);
+  oscG.freq(freq[4]);
   oscG.amp(0);
   oscG.start();
   
